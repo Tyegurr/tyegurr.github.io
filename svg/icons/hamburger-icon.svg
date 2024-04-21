@@ -1,0 +1,10 @@
+<svg version="1.1" width="55" height="55" xmlns="http://www.w3.org/2000/svg">
+    <!-- Top "bun" -->
+    <path d="M0 2 L55 2 L55 13 L0 13" fill="black" />
+
+    <!-- Middle "bun" -->
+    <path d="M0 22 L55 22 L55 33 L0 33" fill="black" />
+
+    <!-- Bottom "bun" -->
+    <path d="M0 42 L55 42 L55 53 L0 53" fill="black" />
+</svg>
