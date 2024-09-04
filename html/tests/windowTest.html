@@ -1,0 +1,88 @@
+<!-- window testing for WindowLib (more like showing how the window SHOULD look) -->
+<html>
+
+<head>
+    <link rel="stylesheet" href="./../../css/WindowLib/windowLib.css" />
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* minimize button */
+        #minimizeBTN_Test {
+            position: absolute;
+            z-index: 15;
+            /* width and height */
+            width: 5vh;
+            height: 5vh;
+            /* offset */
+            left: calc(100% - 15vh);
+        }
+        #MinimizeButton_Txt {
+            position: absolute;
+            z-index: 16;
+            /* width and height */
+            width: 4.5vh;
+            height: 4.5vh;
+            /* offset */
+            right: 0vh;
+            top: -4.7vh;
+        }
+
+
+        /* restore/maximize button */
+        #resMaxBTN_Test {
+            position: absolute;
+            z-index: 15;
+            /* width and height */
+            width: 5vh;
+            height: 5vh;
+            /* offset */
+            left: calc(100% - 10vh);
+        }
+        #ResMaxBTN_TestIMG { /* image id handler for the ResMax Button */
+            position: absolute;
+            z-index: 16;
+            /* width and height */
+            width: 3.5vh;
+            height: 3.5vh;
+            /* offset */
+            right: 0.75vh;
+            top: 0.75vh;
+        }
+
+        /* close button */
+        #closeBTN_Test {
+            position: absolute;
+            z-index: 15;
+            /* width and height */
+            width: 5vh;
+            height: 5vh;
+            /* offset */
+            left: calc(100% - 5vh);
+        }
+    </style>
+</head>
+
+<body>
+    <div style="border-radius: 1vh; background-color: rgb(0, 0, 0); position: absolute; z-index: 1; width: 63vh; height: 40vh; left: calc(50% - 31.5vh); top: calc(50% - 20vh);">
+        <!-- Minimize Button -->
+        <button class="MinimizeButton" id="minimizeBTN_Test" style="color: rgb(255, 255, 255); font-family: monospace;">
+            <p id="MinimizeButton_Txt">_</p>
+        </button>
+        <!-- Resize/Maximize Button -->
+        <button class="ResMaxButton" id="resMaxBTN_Test" style="color: rgb(255, 255, 255); font-family: monospace; justify-content: center;">
+            <img src="./../../img/icons/windowRestoreIcon.svg" id="ResMaxBTN_TestIMG" />
+        </button>
+        <!-- Close Button -->
+        <button class="CloseButton" id="closeBTN_Test" style="color: rgb(255, 255, 255); font-family: monospace; border-top-right-radius: 1vh;">X</button>
+        <p
+            style="position: absolute; z-index: 8; background-color: rgb(0, 0, 0); font-family: monospace; color: rgb(255, 255, 255); font-size: calc(3.2vh); width: calc(-50% + 63vh); height: calc(3.2vh); left: 0.7vh; top: -2.3vh;">Who Is Tyegurr?</p>
+        <div style="position: absolute; z-index: 2; width: 100%; height: calc(35vh); top: 5vh; background-color: rgb(25, 25, 25);">
+            <img src="./../../img/TyegurrPFP_v1.png" style="position: absolute; z-index: 3; width: 30vh; height: 30vh; left: 0px; top: calc(3vh);">
+        </div>
+    </div>
+</body>
+
+</html>

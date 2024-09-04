@@ -1,18 +1,318 @@
+/* keyframe */
+@keyframes loadingFade {
+    0% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+    99% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+        display: none;
+    }
+}
+@keyframes loadingTextFade {
+    0% {
+        color: rgba(255, 255, 255, 1);
+    }
+    100% {
+        color: rgba(255, 255, 255, 0);
+    }
+}
+@keyframes loadingTextFade_RR {
+    0% {
+        color: rgba(120, 120, 120, 1);
+    }
+    100% {
+        color: rgba(120, 120, 120, 0);
+    }
+}
+
 body {
     margin: 0;
     overflow: hidden;
+    background-color: rgb(60, 60, 60);
+}
+
+/* debugging */
+#debuggingMenu {
+    position: absolute;
+    z-index: 900000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* completely invisible */
+}
+/* #deltaDisplayDebug {
+    position: absolute;
+    z-index: 900001;
+    background-color: rgba(0, 0, 0, 0.79);
+    color: rgb(255, 255, 255);
+    width: 250px;
+    height: 15px; 
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+} */
+.debugEntry {
+    position: absolute;
+    z-index: 900001;
+    background-color: rgba(0, 0, 0, 0.79);
+    color: rgb(255, 255, 255);
+    width: 250px;
+    height: 15px;
+    /* text and font config */
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* page loading div */
+#PageLoadingBlock {
+    position: absolute;
+    /* (probably not necessary to put the zIndex to such a high number, but oh well. *shrug*) */
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+#PLB_LoadingText {
+    position: relative;
+    z-index: 100001;
+    /* font and text config */
+    font-family: monospace;
+    font-size: calc(10vh - 1.08vw);
+    text-align: center;
+    /* width and height */
+    width: 120vh;
+    height: 20vh;
+    /* left and top */
+    left: calc(50% - 60vh);
+    top: calc(50% - 5vh);
+}
+#PLB_ResRecomText {
+    position: relative;
+    z-index: 100002;
+    /* font and text config */
+    font-family: monospace;
+    font-size: 3vh;
+    text-align: center;
+    /* width and height */
+    width: 55vw;
+    height: 7vw;
+    /* left and top */
+    left: calc(50% - 27.5vw);
+    top: calc(50% - 2vh);
 }
 
 /* main page stuff */
 #TopNavBar {
     z-index: 9999;
     width: 100%;
-    height: 65px;
+    height: 70px;
     /* box shadow */
-    box-shadow: 0px 5px 15px rgb(80, 80, 80);
+    box-shadow: 0px 5px 15px rgb(0, 0, 0);
+    background-color: rgb(50, 50, 50);
+}
+#sideBarButton {
+    position: absolute;
+    z-index: 1;
+    width: 54px;
+    height: 54px;
+    top: 8px;
+    left: 8px;
+    background-color: rgb(50, 50, 50);
+    border: none;
+}
+#sideBarButton_Img {
+    position: absolute;
+    z-index: 1;
+    width: 54px;
+    height: 54px;
+    left: 0px;
+    top: 0px;
+}
+#NavBarTitle {
+    position: absolute;
+    z-index: 2;
+    width: 80%;
+    height: 70px;
+    left: 10%;
+    top: -64px;
+    color: rgb(180, 180, 255);
+    font-size: 64px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
 }
 
-#AboutCard
-{
-    z-index: 1;
+/* ABOUT WINDOW IDS */
+#TyegurrAboutText {
+    border-radius: 2vh;
+    position: absolute;
+    z-index: 4;
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 50, 50);
+    /* width and height */
+    width: 32vh;
+    height: 28vh;
+    /* offset */
+    left: calc(100% - 33.3vh);
+    bottom: 0.5vh;
 }
+
+/* introduction window */
+#IntroWindow {
+    position: absolute;
+    z-index: 5;
+    /* border config */
+    border: 2px solid rgba(255, 120, 200, 1);
+    border-radius: 1vh;
+    border-width: 0.4vh;
+    /* scaling */
+    width: 60vh;
+    height: 37vh;
+    /* color */
+    background-color: rgba(0, 0, 0, 1);
+}
+#IW_Cont { /* IntroWindow content */
+    position: absolute;
+    z-index: 6;
+    /* color */
+    background-color: rgba(30, 30, 30, 1);
+    /* scaling */
+    width: 100%;
+    height: calc(100% - 4vh);
+    /* offsets */
+    top: 4vh;
+    /* border radii */
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+}
+#IW_PFP {
+    position: absolute;
+    z-index: 6;
+    width: 27vh;
+    height: 27vh;
+    left: 2vh;
+    top: calc(50% - 13.5vh);
+    background-color: rgba(22, 22, 22, 1);
+    border-radius: 100%;
+}
+#IW_InfoContainer {
+    position: absolute;
+    z-index: 6;
+    background-color: rgba(45, 45, 45, 1);
+    border-radius: 1vh;
+    width: 27vh;
+    height: 27vh;
+    left: 31vh;
+    top: calc(50% - 13.5vh);
+}
+#IW_InfoText {
+    position: absolute;
+    z-index: 6;
+    font-family: monospace;
+    font-size: 2.45vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 26vh;
+    height: 26vh;
+    top: 0vh;
+    left: 0.5vh;
+}
+
+/* <INFO> window controls for the IntroWindow </INFO> */
+/* minimize button */
+#IW_MinimizeBTN {
+    position: absolute;
+    z-index: 7;
+    /* width and height */
+    width: 4vh;
+    height: 4vh;
+    /* offset */
+    left: calc(100% - 12.8vh);
+}
+#IW_MinimizeButton_Txt {
+    position: absolute;
+    z-index: 8;
+    text-align: center;
+    /* width and height */
+    width: 3.5vh;
+    height: 3.5vh;
+    /* offset */
+    right: 0vh;
+    top: -5.4vh;
+}
+
+/* ResMax button */
+#IW_ResMaxBTN {
+    position: absolute;
+    z-index: 7;
+    /* width and height */
+    width: 4vh;
+    height: 4vh;
+    /* offset */
+    left: calc(100% - 8.4vh);
+}
+#IW_ResMaxBTN_IMG { /* image id handler for the ResMax Button */
+    position: absolute;
+    z-index: 8;
+    /* width and height */
+    width: 3vh;
+    height: 3vh;
+    /* offset */
+    right: 0.5vh;
+    top: 0.5vh;
+}
+
+/* close button */
+#IW_closeBTN {
+    position: absolute;
+    z-index: 7;
+    /* border */
+    border-top-right-radius: 0.8vh;
+    /* width and height */
+    width: 4.3vh;
+    height: 4.3vh;
+    /* offset */
+    left: calc(100% - 4.3vh);
+}
+#IW_closeBTN_Txt {
+    position: absolute;
+    z-index: 8;
+    font-size: 4.2vh;
+    /* width and height */
+    width: 4.3vh;
+    height: 4.3vh;
+    /* offsets */
+    top: -4.4vh;
+    left: 0vh;
+}
+
+/* info window title */
+#IW_Title {
+    position: absolute;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 1);
+    /* font config */
+    font-family: monospace;
+    font-size: 3.2vh;
+    /* scaling */
+    width: 28vh;
+    height: 4vh;
+    /* offsets */
+    top: -3.1vh;
+    left: 0.6vh;
+}
+
+#IW_GrabDiv {
+    position: absolute;
+    z-index: 100;
+    display: block;
+    background-color: rgba(255, 255, 255, 0);
+    /* scaling */
+    width: calc(100% - 12.8vh);
+    height: 4vh;
+    cursor: grab;
+}
+
+/* games window */
