@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="./css/index.css" />
     <!-- window lib styling -->
     <link rel="stylesheet" href="./css/WindowLib/windowLib.css" />
+    
+    <!-- <script src="./js/index/Stuffs.js"></script> -->
 
     <meta charset="UTF-8" />
     <meta name="description" content="Tyegurr's github pages site!" />
 </head>
 
 <body>
+    <!-- notes:
+     for custom json (i'm calling it TyeSON), an indentation is marked with a "==|"
+     -->
+
     <div id="debuggingMenu" style="display: none;">
         <p id="deltaDisplayDebug" class="debugEntry">DeltaTime: Initializing</p>
         <br>
@@ -34,7 +40,7 @@
     </div>
 
     <!-- "Who Is Tyegurr?" window -->
-    <div id="IntroWindow" style="left: calc(50% - 70vh/2); top: calc(50% - 37vh/2);" windowGrabbable>
+    <div id="IntroWindow" style="left: calc(0% + 2vh); top: calc(50% - 37vh/2);" windowGrabbable>
         <!-- Window Controls -->
         <!-- Minimize Button -->
         <button class="MinimizeButton" class="noInteract" id="IW_MinimizeBTN" style="color: rgb(255, 255, 255); font-family: monospace;">
@@ -51,32 +57,52 @@
 
         <!-- Window title -->
         <p id="IW_Title" class="noInteract">Who is Tyegurr?</p>
-        <div id="IW_GrabDiv" class="GrabWindow"></div>
 
         <!-- Content -->
         <div id="IW_Cont">
-            <img id="IW_PFP" src="./img/TyegurrPFP_v1.png" />
+            <img id="IW_PFP" src="./img/TyegurrPFP_v2.png" />
             <span id="IW_InfoContainer">
-                <p id="IW_InfoText">Tyegurr is a 13 y/o aspiring GameDev, 3D Artist. And much more. You have managed to find or access my github pages website! Have fun exploring!</p>
+                <p id="IW_InfoText">Tyegurr is a 14 y/o aspiring GameDev, 3D Artist. And much more. You have managed to find or access my github pages website! Have fun exploring!</p>
             </span>
         </div>
     </div>
 
-    <!-- Games window -->
-    <div id="GamesWindow">
+    <!-- Stuffs window -->
+    <window
+    name="stuffsWindow" width="70vh" height="80vh" backgroundColor="rgb(0, 0, 0)"
+    xPos="calc(64vh)" yPos="calc(50% - (80vh/2))"
+    borderSize="2px" borderColor="rgb(255, 120, 200)"
+    titleBarName="Stuffs">
+        <div id="StuffsScrollView">
+            <!-- <div id="UselessButFunFoldout" class="Stuffs-Foldout" style="top: 3px">
+                <p class="Stuffs-Foldout_Title">"Useless but fun"</p>
+                <button class="Stuffs-Foldout_ExpandButton" style="display: none;">
+                    <img class="Stuffs-Foldout_ExColButtonImg" src="img/icons/ExpandIcon.svg" />
+                </button>
+                <button class="Stuffs-Foldout_CollapseButton">
+                    <img class="Stuffs-Foldout_ExColButtonImg" src="img/icons/CollapseIcon.svg" />
+                </button>
+            </div>
+            <div id="Stuffs-FoldoutOne" class="Stuffs-FoldoutContent" style="top: 3px; height: calc(60px + 300px)">
+            </div> --> <!-- For reference -->
+            <p style="font-size: 50px"><b>Coming Soon!</b></p>
+        </div>
+    </window>
+
+    <div id="PageAboutWindow">
     </div>
 
     <!-- ##@@@@## SCRIPTS FOR INDEX.HTML ##@@@@## -->
     <!--=========================================-->
     <!-- LIBRARIES AND STUFF -->
     <script src="./js/QuickUtils.js"></script>
+    <script src="./js/WindowLib/WindowLib-Manager.js"></script>
 
     <!--=========================================-->
     <!-- INDEX SCRIPTS -->
     <script src="./js/index/loading.js"></script>
-    <script src="./js/index/index-Main.js"></script>
-
-    <script src="./js/index/HomePageWindows.js"></script>
+    <script src="./js/index/index-Main.js" defer></script>
+    <script src="./js/index/Stuffs.js"></script> <!-- This script handles the "Stuffs" window -->
 </body>
 
 </html>

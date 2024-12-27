@@ -35,6 +35,9 @@ function InitMain() {
 
     // sets up elements: debug
     DebugElements.debuggingMenu = document.getElementById("debuggingMenu");
+
+    // initializes other stuff
+    Stuffs_OnLoad();
 }
 
 window.onload = InitMain();

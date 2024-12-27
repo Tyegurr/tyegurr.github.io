@@ -1,2 +1,11 @@
-# tools
+# -=[+]=- START OF: DEVELOPER ENVIRONMENT -=[+]=-
+# Files
 randnum.js
+index.js
+ServerConfig.json
+package-lock.json
+package.json
+# Folders
+node_modules/
+
+# -=[+]=- END OF: DEVELOPER ENVIRONMENT -=[+]=-
