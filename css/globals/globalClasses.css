@@ -1,0 +1,21 @@
+.RP {
+    position: absolute;
+}
+
+.NoSelect {
+    -webkit-user-select: none;
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+.NoDrag {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.GaretLight {
+    font-family: "GaretLight";
+}
+.GaretHeavy {
+    font-family: "GaretHeavy";
+}

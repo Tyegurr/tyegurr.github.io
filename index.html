@@ -1,110 +1,32 @@
 <html>
+    <head>
+        <title>Tye's Internet Home</title>
 
-<head>
-    <title>Tyegurr's Internet Home</title>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="./css/classes.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <!-- window lib styling -->
-    <link rel="stylesheet" href="./css/WindowLib/windowLib.css" />
-    
-    <!-- <script src="./js/index/Stuffs.js"></script> -->
+        <link rel="stylesheet" href="./css/globals/globalFonts.css" />
+        <link rel="stylesheet" href="./css/globals/globalClasses.css" />
+        <link rel="stylesheet" href="./css/index.css"/>
 
-    <!-- Metas and page setup -->
-    <meta charset="UTF-8" />
-    <meta name="description" content="Tyegurr's github pages site!" />
-    <link rel="icon" type="image/x-icon" href="./MixedResources/ico/favicon.ico" />
-</head>
-
-<body>
-    <!-- notes:
-     for custom json (i'm calling it TyeSON), an indentation is marked with a "==|"
-     -->
-
-    <div id="debuggingMenu" style="display: none;">
-        <p id="deltaDisplayDebug" class="debugEntry">DeltaTime: Initializing</p>
-        <br>
-        <p id="fpsDisplayDebug" class="debugEntry">FPS: Initializing</p>
-    </div>
-
-    <div id="PageLoadingBlock" class="noRightClick">
-        <!-- PLB_LoadingText - Self explanitory. -->
-        <p id="PLB_LoadingText" style="background-color: rgba(0, 0, 0, 0); color: rgba(255, 255, 255, 1)">The page is loading... Please be patient.</p>
-        <!-- PLB_ResRecomText - Tells you the recommended resolution settings for the page. -->
-        <p id="PLB_ResRecomText" style="background-color: rgba(0, 0, 0, 0); color: rgba(120, 120, 120, 1)">This page is best viewed at a minimum widescreen resolution of 1280x720.</p>
-    </div>
-
-    <div id="TopNavBar" class="posDeault">
-        <button id="sideBarButton">
-            <img src="./img/pages/index/hamburgerMenuIcon.svg" id="sideBarButton_Img" width="54px" height="54px">
-        </button>
-        <p id="NavBarTitle" class="noInteract">Tye's Internet Home</p>
-    </div>
-
-    <!-- "Who Is Tyegurr?" window -->
-    <div id="IntroWindow" style="left: calc(0% + 2vh); top: calc(50% - 37vh/2);" windowGrabbable>
-        <!-- Window Controls -->
-        <!-- Minimize Button -->
-        <button class="MinimizeButton" class="noInteract" id="IW_MinimizeBTN" style="color: rgb(255, 255, 255); font-family: monospace;">
-            <p id="IW_MinimizeButton_Txt" class="noInteract">_</p>
-        </button>
-        <!-- Resize/Maximize Button -->
-        <button class="ResMaxButton" class="noInteract" id="IW_ResMaxBTN" style="color: rgb(255, 255, 255); font-family: monospace; justify-content: center;">
-            <img src="./img/icons/windowRestoreIcon.svg" class="noInteract" id="IW_ResMaxBTN_IMG" />
-        </button>
-        <!-- Close Button -->
-        <button class="CloseButton" class="noInteract" id="IW_closeBTN" style="color: rgb(255, 255, 255); font-family: monospace;">
-            <p id="IW_closeBTN_Txt" class="noInteract">X</p>
-        </button>
-
-        <!-- Window title -->
-        <p id="IW_Title" class="noInteract">Who is Tyegurr?</p>
-
-        <!-- Content -->
-        <div id="IW_Cont">
-            <img id="IW_PFP" src="./img/TyegurrPFP_v2.png" />
-            <span id="IW_InfoContainer">
-                <p id="IW_InfoText">Tyegurr is a 14 y/o aspiring GameDev, 3D Artist. And much more. You have managed to find or access my github pages website! Have fun exploring!</p>
-            </span>
-        </div>
-    </div>
-
-    <!-- Stuffs window -->
-    <window
-    name="stuffsWindow" width="70vh" height="80vh" backgroundColor="rgb(0, 0, 0)"
-    xPos="calc(64vh)" yPos="calc(50% - (80vh/2))"
-    borderSize="2px" borderColor="rgb(255, 120, 200)"
-    titleBarName="Stuffs">
-        <div id="StuffsScrollView">
-            <!-- <div id="UselessButFunFoldout" class="Stuffs-Foldout" style="top: 3px">
-                <p class="Stuffs-Foldout_Title">"Useless but fun"</p>
-                <button class="Stuffs-Foldout_ExpandButton" style="display: none;">
-                    <img class="Stuffs-Foldout_ExColButtonImg" src="img/icons/ExpandIcon.svg" />
-                </button>
-                <button class="Stuffs-Foldout_CollapseButton">
-                    <img class="Stuffs-Foldout_ExColButtonImg" src="img/icons/CollapseIcon.svg" />
-                </button>
+        <link rel="stylesheet" href="./css/lib/WindowLib.css" />
+    </head>
+    <body>
+        <div id="taskbar" class="RP"></div>
+        
+        <div id="aboutWindow" class="fakeWindow">
+            <div class="fakeWindowTopBar">
+                <span class="fakeWindowTitleContent GaretLight NoSelect NoDrag" draggable="false">About</span>
+                <div class="fakeWindowControls">
+                    <button class="fakeWindowCloseButton NoDrag"><img src="/MixedResources/images/CloseButton.svg" class="NoSelect NoDrag" draggable="false" width="24px" height="24px" style="position: absolute; z-index: 12; left: 3px; top: 3px"/></button>
+                </div>
+                <div class="fakeWindowDragArea" id="aboutWindowDragArea"></div>
             </div>
-            <div id="Stuffs-FoldoutOne" class="Stuffs-FoldoutContent" style="top: 3px; height: calc(60px + 300px)">
-            </div> --> <!-- For reference -->
-            <p style="font-size: 50px"><b>Coming Soon!</b></p>
+            <div class="fakeWindowContent">
+                <h1 class="GaretLight" style="color: white; position: absolute; left: 10px; top: -12px;">Hello!!</h1>
+            </div>
         </div>
-    </window>
 
-    <div id="PageAboutWindow">
-    </div>
-
-    <!-- ##@@@@## SCRIPTS FOR INDEX.HTML ##@@@@## -->
-    <!--=========================================-->
-    <!-- LIBRARIES AND STUFF -->
-    <script src="./js/QuickUtils.js"></script>
-    <script src="./js/WindowLib/WindowLib-Manager.js"></script>
-
-    <!--=========================================-->
-    <!-- INDEX SCRIPTS -->
-    <script src="./js/index/loading.js"></script>
-    <script src="./js/index/index-Main.js" defer></script>
-    <script src="./js/index/Stuffs.js"></script> <!-- This script handles the "Stuffs" window -->
-</body>
-
+        <!-- script stuffies -->
+        <script src="/js/MoreMath.js"></script>
+        <script src="./js/index/index.js"></script>
+        <script src="./js/index/AboutWindow.js"></script>
+    </body>
 </html>
