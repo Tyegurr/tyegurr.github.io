@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="249.99998"
+   height="250.00002"
+   viewBox="0 0 66.145828 66.145837"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#84ffff;fill-opacity:0.687151;stroke-width:0.29137"
+       id="rect1"
+       width="46.009441"
+       height="38.800591"
+       x="-5.4291949"
+       y="18.65827"
+       transform="matrix(0.96896301,-0.24720577,0.36119203,0.93249146,0,0)" />
+    <rect
+       style="fill:#6786ff;fill-opacity:0.687151;stroke-width:0.29137"
+       id="rect2"
+       width="46.009441"
+       height="38.800591"
+       x="18.795982"
+       y="2.1323595"
+       transform="matrix(0.96577307,0.25938848,-0.14215532,0.98984436,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:36.6684px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:0.829609;stroke-width:3.05569"
+       x="31.70546"
+       y="37.654289"
+       id="text2"
+       transform="rotate(10.453141)"><tspan
+         id="tspan2"
+         style="fill:#000000;fill-opacity:0.829609;stroke-width:3.05569"
+         x="31.70546"
+         y="37.654289">?</tspan></text>
+  </g>
+</svg>
