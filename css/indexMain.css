@@ -60,9 +60,22 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
     width: 600px;
-    height: 300px;
+    height: 460px;
 }
 
 a {
     color: rgb(197, 255, 237);
+}
+
+#aboutWindowGallery {
+    position: absolute;
+    z-index: 15;
+
+    left: 10px;
+    top: 325px;
+
+    width: calc(100% - 20px);
+    height: 200px;
+
+    /*background-color: grey;*/
 }

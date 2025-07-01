@@ -4,8 +4,8 @@
 
     var WindowX = (window.innerWidth / 2) - 300;
     var WindowTargetX = (window.innerWidth / 2) - 300;
-    var WindowY = (window.innerHeight / 2) - 150 - 40;
-    var WindowTargetY = (window.innerHeight / 2) - 150 - 40;
+    var WindowY = (window.innerHeight / 2) - 280 - 0;
+    var WindowTargetY = (window.innerHeight / 2) - 280 - 0;
 
     var XPosOnDrag = 0;
     var MouseXOnDrag = 0;
