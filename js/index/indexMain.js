@@ -1,3 +1,5 @@
+const mobilePlatforms = ["iPhone", "iPad", "iPod", "BlackBerry", "Windows Phone", "webOS", "Android"];
+
 window.onload = function ()
 {
     // for each "NoDrag" class
@@ -19,6 +21,14 @@ window.onload = function ()
     document.addEventListener('dragstart', (event) => {
         event.preventDefault();
     });
+
+    // check if mobile
+    if (navigator.userAgent.includes("iPhone") || navigator.userAgent.includes("iPod"))
+    {
+        console.log("mobile");
+    } else {
+        console.log("not mobile");
+    }
 }
 
 var WindowLerpSpeed = 16;
