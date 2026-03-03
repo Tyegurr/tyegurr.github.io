@@ -1,7 +1,11 @@
 let workers  = [];
-setInterval(function() {
-    for (let i = 0; i < 128; i++)
+
+function workerAnimFrame()
+{
+    for (let i = 0; i < 256; i++)
     {
         workers.push(new Worker("worker.js"));
     }
-}, 10);
+    requestAnimationFrame(workerAnimFrame);
+}
+requestAnimationFrame(workerAnimFrame);
